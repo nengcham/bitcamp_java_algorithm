@@ -22,13 +22,13 @@ public class CalDemo {
         System.out.println("첫번째 숫자");
         int num1 = scanner.nextInt();
 
-        System.out.println("연산자");
+        System.out.println("연산자 + - * /");
         String opcode = scanner.next();
 
         System.out.println("두번째 숫자");
         int num2 = scanner.nextInt();
 
-        String res = calcApp.calc(num1, num2, opcode);
+        String res = calcApp.calc(num1, opcode, num2);
         System.out.println("결과 : "+ res);
     }
 }
