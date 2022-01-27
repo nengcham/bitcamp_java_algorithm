@@ -12,6 +12,7 @@ package com.example.demo.calc;
  * ================================
  * 2022-01-24   choigeonil    최초 생성
  * 2022-01-26   choigeonil    if절 작성, 4칙연산 추가
+ * 2022-01-07   choigeonil    thih. 오류수정
  */
 public class CalcApp {
     public static String CALC_APP = "계산기";
@@ -21,6 +22,9 @@ public class CalcApp {
 
 
     public String calc(int num1, String opcode, int num2){
+        this.num1 = num1;
+        this.opcode = opcode;
+        this.num2 = num2;
         int res = 0;
 
         switch (opcode){

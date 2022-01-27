@@ -12,13 +12,13 @@ package com.example.demo.login;
  * 2022-01-26   choigeonil    if절 작성, 성공실패 결과추가
  */
 public class LoginApp {
-    static String LOGIN_APP = "로그인 앱";
+    public static String LOGIN_APP = "로그인 앱";
     String id;
     String pw;
     String name;
     static String PASSWORD = "abc";
 
-    public String login(String id, String pw, String name){
+    public String getlogin(String id, String pw, String name){
 
 //        if (pw.equals(PASSWORD)){
 //            res = String.format("%s 님의 비번 %s 가 맞습니다. 로그인 성공", this.name, this.pw);

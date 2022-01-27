@@ -17,7 +17,7 @@ public class GoogleApp {
     public static String GOOGLE_APP = "Google";
     private String search;
 
-    public String google(String search){
+    public String getgoogle(String search){
         this.search = search;
         String res = "%s을(를) 검색한 결과입니다.";
         return String.format(res, this.search);
