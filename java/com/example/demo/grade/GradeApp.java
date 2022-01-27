@@ -38,10 +38,15 @@ public class GradeApp {
 
     public String getGrade(String name, int kor, int eng, int math){
 
+        this.name = name;
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+
         int total = kor + eng + math;
         int avg = total / 3 ;
-
         String pass = (avg >=60) ? "합격" : "불합격";
+
         String grade = String.format(" * ########## %s ########\n" +
                         " * 이름: %s\n" +
                         " * > 국어: %d점 \n" +
@@ -55,6 +60,4 @@ public class GradeApp {
 
         return grade;
     }
-
-
 }
