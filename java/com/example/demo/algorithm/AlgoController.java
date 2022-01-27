@@ -17,6 +17,8 @@ public class AlgoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BinSearch binSearch = new BinSearch();
+        Greedy greedy = new Greedy();
+
         while (true){
             System.out.println("[Menu] 0.exit\n" +
                     "[김아름]1. stack \t" +
@@ -34,7 +36,11 @@ public class AlgoController {
             switch (scanner.next()){
                 case "0" : return;
                 case "11" :
-//                    System.out.println(binSearch.solution()); break;
+//                    System.out.println(binSearch.solution());
+                    break;
+                case "12" :
+//                    System.out.println(Greedy.solution());
+                    break;
                 default:
                     System.out.println("Wrong Number"); break;
             }
