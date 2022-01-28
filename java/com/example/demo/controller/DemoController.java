@@ -72,9 +72,9 @@ public class DemoController {
                     break;
                 case "5" :
                     System.out.println(LoginDTO.LOGIN_TITLE + "\n아이디, 비밀번호, 이름");
-                    login.setName(scanner.next());
                     login.setId(scanner.next());
                     login.setPw(scanner.next());
+                    login.setName(scanner.next());
                     res = loginService.execute(login);
                     break;
                 default: res = "WRONG";
