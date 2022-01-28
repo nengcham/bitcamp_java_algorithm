@@ -1,4 +1,4 @@
-package com.example.demo.google;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.google
@@ -13,16 +13,16 @@ package com.example.demo.google;
  * ================================
  * 2022-01-25   choigeonil    최초 생성
  */
-public class GoogleApp {
-    public static String GOOGLE_APP = "Google";
+public class GoogleDTO {
+    public static String GOOGLE_TITLE = "Google";
     private String search;
 
-    public String getgoogle(String search){
-        this.search = search;
-        String res = "%s을(를) 검색한 결과입니다.";
-        return String.format(res, this.search);
+    public String getSearch(){
+        return search;
     }
-
+    public void setSearch(String search){
+        this.search = search;
+    }
 }
 
 

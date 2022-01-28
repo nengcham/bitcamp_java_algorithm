@@ -1,4 +1,4 @@
-package com.example.demo.calc;
+package com.example.demo.domain;
 /**
  * packageName: com.example.demo.calc
  * fileName   : CalcApp.java
@@ -14,27 +14,28 @@ package com.example.demo.calc;
  * 2022-01-26   choigeonil    if절 작성, 4칙연산 추가
  * 2022-01-07   choigeonil    thih. 오류수정
  */
-public class CalcApp {
-    public static String CALC_APP = "계산기";
+public class CalcDTO {
+    public static String CALC_TITLE = "계산기";
     private int num1;
     private String opcode;
     private int num2;
 
-
-    public String calc(int num1, String opcode, int num2){
-        this.num1 = num1;
-        this.opcode = opcode;
-        this.num2 = num2;
-        int res = 0;
-
-        switch (opcode){
-            case "+": res = num1 + num2; break;
-            case "-": res = num1 - num2; break;
-            case "*": res = num1 * num2; break;
-            case "/": res = num1 / num2; break;
-        }
-
-        return String.format("%d %s %d = %d", this.num1, this.opcode, this.num2, res);
+    public int getNum1(){
+        return num1;
     }
-
+    public void setNum1(int num1){
+        this.num1 = num1;
+    }
+    public String getOpcode(){
+        return opcode;
+    }
+    public void setOpcode(String opcode){
+        this.opcode = opcode;
+    }
+    public int getNum2(){
+        return num2;
+    }
+    public void setNum2(int num2){
+        this.num2 = num2;
+    }
 }

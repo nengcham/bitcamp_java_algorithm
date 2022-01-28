@@ -1,4 +1,7 @@
-package com.example.demo.algorithm;
+package com.example.demo.controller;
+
+import com.example.demo.algorithm.BinSearch;
+import com.example.demo.algorithm.Greedy;
 
 import java.util.Scanner;
 

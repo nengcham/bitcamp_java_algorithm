@@ -1,4 +1,7 @@
-package com.example.demo.google;
+package com.example.demo.service;
+
+import com.example.demo.domain.GoogleDTO;
+
 /**
  * packageName: com.example.demo.google
  * fileName   : GoogleDemo.java
@@ -10,10 +13,9 @@ package com.example.demo.google;
  * ================================
  * 2022-01-25   choigeonil    최초 생성
  */
-public class GoogleDemo {
-    public String execute(String search) {
-        GoogleApp googleApp = new GoogleApp();
-        return googleApp.getgoogle(search);
+public class GoogleService {
+    public String execute(GoogleDTO google) {
+        return String.format("%s을(를) 검색한 결과입니다.", google.getSearch());
 
     }
 }
