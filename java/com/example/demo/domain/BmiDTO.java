@@ -37,5 +37,4 @@ public class BmiDTO {
     public void  setWeight(double weight){
         this.weight = weight;
     }
-
 }
