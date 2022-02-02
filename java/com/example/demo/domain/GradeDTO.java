@@ -30,6 +30,7 @@ package com.example.demo.domain;
  * 2022-01-26   choigeonil    최초 생성
  */
 public class GradeDTO {
+    
     public static String GRADE_TITLE = "성적표";
     private String name;
     private int kor;
