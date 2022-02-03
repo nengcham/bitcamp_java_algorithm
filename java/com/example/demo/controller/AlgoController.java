@@ -47,6 +47,8 @@ public class AlgoController {
                 default:
                     System.out.println("Wrong Number"); break;
                     
+                    
+                    
             }
         }
     }
