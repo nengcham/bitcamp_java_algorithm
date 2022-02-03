@@ -31,11 +31,10 @@ public class BmiDTO {
     public void setHeight(double height){
         this.height = height;
     }
-    public  double getWeight(){
+    public double getWeight(){
         return weight;
     }
     public void  setWeight(double weight){
         this.weight = weight;
     }
-
 }
