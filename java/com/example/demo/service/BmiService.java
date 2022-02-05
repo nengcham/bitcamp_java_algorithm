@@ -26,6 +26,8 @@ public class BmiService {
         } else {
             res = "비만";
         }
+        
+        
         return String.format("%s님의 BMI는 %.2f, %s 입니다.", bmi.getName(), bmires, res);
     }
 }
