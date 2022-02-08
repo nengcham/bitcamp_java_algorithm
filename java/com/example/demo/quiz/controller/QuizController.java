@@ -1,9 +1,6 @@
 package com.example.demo.quiz.controller;
 
-import com.example.demo.quiz.service.Feb06ServiceImpl;
-import com.example.demo.quiz.service.Feb07Service;
-import com.example.demo.quiz.service.Feb07ServiceImpl;
-import com.example.demo.quiz.service.Fev06Service;
+import com.example.demo.quiz.service.*;
 
 import java.util.Scanner;
 
@@ -20,8 +17,9 @@ import java.util.Scanner;
  */
 public class QuizController {
     public void excute(Scanner scanner){
-        Fev06Service fev06Service = new Feb06ServiceImpl();
+        Feb06Service fev06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
+        Feb08Service feb08Service = new Feb08ServiceImpl();
 
         while (true){
             System.out.println("[서브메뉴]\n0)Exit 1)2월6일 2)2월7일 3)2월8일");
@@ -69,7 +67,7 @@ public class QuizController {
                                 "5. 임의로 입력받은 숫자 맞추기(numberGolf)\n");
                         switch (scanner.next()){
                             case "0":
-                                System.out.println("종료합니다."); return;
+                                System.out.println("EXIT"); return;
                             case "1":
                                 feb07Service.dice(scanner); break;
                             case "2":
@@ -81,14 +79,43 @@ public class QuizController {
                             case "5":
                                 feb07Service.numberGolf(scanner); break;
                             default:
-                                System.out.println("잘못된 입력입니다."); break;
+                                System.out.println("WRONG"); break;
                         }
                     }
                 case "3":
                     System.out.println("2월 8일");
-                    break;
+                    while (true){
+                        System.out.println("[소메뉴]\n" +
+                                "0. 종료\n" +
+                                "1. 로또\n" +
+                                "2. 야구\n" +
+                                "3. 좌석예약\n" +
+                                "4. 은행 입출금\n" +
+                                "5. 구구단\n");
+                        switch (scanner.next()){
+                            case "0":
+                                System.out.println("EXIT"); return;
+                            case "1":
+                                feb08Service.lotto(scanner); break;
+                            case "2":
+                                feb08Service.baseball(scanner); break;
+                            case "3":
+                                feb08Service.booking(scanner); break;
+                            case "4":
+                                feb08Service.bank(scanner); break;
+                            case "5":
+                                feb08Service.gugudan(scanner); break;
+                            default:
+                                System.out.println("WRONG");
+
+                        }
+                    }
+                case "4":
+                case "5":
+                case "6":
+                case "7":
                 default:
-                    System.out.println("다시입력");
+                    System.out.println("WRONG");
                     break;
             }
         }
