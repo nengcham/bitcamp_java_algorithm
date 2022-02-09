@@ -1,7 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.algorithm.controller.AlgorithmController;
-import com.example.demo.phone.controller.OopController;
+import com.example.demo.Oop.controller.OopController;
 import com.example.demo.quiz.controller.QuizController;
 import com.example.demo.auth.controller.AuthController;
 import org.springframework.boot.SpringApplication;
