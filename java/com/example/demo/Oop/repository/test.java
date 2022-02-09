@@ -1,6 +1,6 @@
-package com.example.demo.Oop.repository;
+package com.example.demo.oop.repository;
 
-import com.example.demo.Oop.controller.OopController;
+import com.example.demo.oop.controller.OopController;
 
 import java.util.Scanner;
 

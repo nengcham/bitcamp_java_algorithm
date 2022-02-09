@@ -1,4 +1,4 @@
-package com.example.demo.Oop.repository;
+package com.example.demo.oop.repository;
 
 /**
  * packageName: com.example.demo.phone.repository
