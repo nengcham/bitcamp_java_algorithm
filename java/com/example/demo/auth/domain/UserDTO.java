@@ -11,8 +11,13 @@ package com.example.demo.auth.domain;
  * 2022-01-24   choigeonil    최초 생성
  * 2022-01-26   choigeonil    if절 작성, 성공실패 결과추가
  */
-public class LoginDTO {
+public class UserDTO {
     public static String LOGIN_TITLE = "로그인 앱";
+
+    private final static UserDTO userDTO = new UserDTO();
+    private UserDTO(){}
+    public static UserDTO getInstance(){return userDTO;}
+
     String id;
     String pw;
     String name;

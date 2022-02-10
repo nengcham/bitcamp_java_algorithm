@@ -1,4 +1,7 @@
 package com.example.demo.auth.domain;
+
+import com.example.demo.oop.domain.CelPhone;
+
 /**
  * packageName: com.example.demo.calc
  * fileName   : CalcApp.java
@@ -15,10 +18,14 @@ package com.example.demo.auth.domain;
  * 2022-01-07   choigeonil    thih. 오류수정
  */
 public class CalcDTO {
-    public static String CALC_TITLE = "계산기";
+    public final static String CALC_TITLE = "계산기";
     private int num1;
     private String opcode;
     private int num2;
+
+    private final static CalcDTO calcDTO = new CalcDTO();
+    private CalcDTO(){}
+    public static CalcDTO getInstance(){return calcDTO;}
 
     public int getNum1(){
         return num1;

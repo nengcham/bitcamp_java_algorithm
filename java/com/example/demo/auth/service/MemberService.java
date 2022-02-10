@@ -13,10 +13,10 @@ import com.example.demo.auth.domain.*;
  * ================================
  * 2022-02-07   choigeonil    최초 생성
  */
-public interface StudentService {
+public interface MemberService {
     String getBmi(BmiDTO bmi);
     String calc(CalcDTO calc);
     String search(GoogleDTO google);
     String getGrade(GradeDTO grade);
-    String login(LoginDTO login);
+    String login(UserDTO login);
 }

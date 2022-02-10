@@ -19,6 +19,10 @@ public class BmiDTO extends Object{
     private double height;
     private double weight;
 
+    private final static BmiDTO bmiDTO = new BmiDTO();
+    private BmiDTO(){}
+    public static BmiDTO getInstance(){return bmiDTO;}
+
     public String getName(){
         return name;
     }

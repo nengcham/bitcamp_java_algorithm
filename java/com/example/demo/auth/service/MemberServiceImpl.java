@@ -13,7 +13,7 @@ import com.example.demo.auth.domain.*;
  * ================================
  * 2022-02-07   choigeonil    최초 생성
  */
-public class StudentServiceImpl implements StudentService{
+public class MemberServiceImpl implements MemberService {
     @Override
     public String getBmi(BmiDTO bmi) {
         /**
@@ -79,7 +79,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public String login(LoginDTO login) {
+    public String login(UserDTO login) {
         return (login.getPw().equals(login.getPASSWORD())) ? String.format("%s 님의 비번 %s 가 맞습니다. 로그인 성공", login.getName(), login.getPw())
                 : String.format("%s 님의 ID는 맞고, 비번 %s가 틀립니다. 로그인 실패", login.getId(), login.getPw());
     }

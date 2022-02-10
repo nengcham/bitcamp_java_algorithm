@@ -20,9 +20,10 @@ public class QuizController {
         Feb06Service fev06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
+        Feb10Service feb10Service = new Feb10ServiceImpl();
 
         while (true){
-            System.out.println("[서브메뉴]\n0)Exit 1)2월6일 2)2월7일 3)2월8일");
+            System.out.println("[서브메뉴]\n0)Exit 1)2월6일 2)2월7일 3)2월8일 4)2월10일");
             switch (scanner.next()){
                 case "0":
                     System.out.println("EXIT"); return;
@@ -111,6 +112,41 @@ public class QuizController {
                         }
                     }
                 case "4":
+                    System.out.println("2월 10일");
+                    while (true){
+                        System.out.println("[소메뉴]\n" +
+                                "0. 종료\n" +
+                                "1. 랜덤문제(9가지)");
+                        switch (scanner.next()){
+                            case "0":
+                                System.out.println("EXIT"); return;
+                            case "1":
+                                int random = (int)(Math.random()*9);
+                                switch (random){
+                                    case 0:
+                                        feb10Service.bubbleSort(); break;
+                                    case 1:
+                                        feb10Service.insertionSort(); break;
+                                    case 2:
+                                        feb10Service.selectionSort(); break;
+                                    case 3:
+                                        feb10Service.quickSort(); break;
+                                    case 4:
+                                        feb10Service.mergeSort(); break;
+                                    case 5:
+                                        feb10Service.magicSquare(); break;
+                                    case 6:
+                                        feb10Service.zigzag(); break;
+                                    case 7:
+                                        feb10Service.rectangleStarPrint(); break;
+                                    case 8:
+                                        feb10Service.triangleStarPrint(); break;
+                                }
+                                break;
+                            default:
+                                System.out.println("WRONG");
+                        }
+                    }
                 case "5":
                 case "6":
                 case "7":

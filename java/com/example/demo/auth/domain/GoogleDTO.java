@@ -17,6 +17,10 @@ public class GoogleDTO {
     public static String GOOGLE_TITLE = "Google";
     private String search;
 
+    private final static GoogleDTO googleDTO = new GoogleDTO();
+    private GoogleDTO(){}
+    public static GoogleDTO getInstance(){return googleDTO;}
+
     public String getSearch(){
         return search;
     }

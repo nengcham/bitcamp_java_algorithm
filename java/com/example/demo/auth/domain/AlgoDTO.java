@@ -17,6 +17,10 @@ public class AlgoDTO {
     private String subject1;
     private String subject2;
 
+    private final static AlgoDTO algoDTO = new AlgoDTO();
+    private AlgoDTO(){}
+    public static AlgoDTO getInstance(){return algoDTO;}
+
     public String getName(){
         return name;
     }
