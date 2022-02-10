@@ -18,21 +18,20 @@ public class Phone {
     protected String kind;
     protected String call;
 
+    public Phone(String company, String kind){
+        this.company = company;
+        this.kind = kind;
+    }
+
     public String getCompany() {
         return company;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
 
     public String getKind() {
         return kind;
     }
 
-    public void setKind(String kind) {
-        this.kind = kind;
-    }
 
     public String getCall() {
         return call;
@@ -44,7 +43,7 @@ public class Phone {
 
     @Override
     public String toString() {
-        return String.format("%s 제조사의 %s를 사용하여 %라고 통화한다.",
-                getCompany(), getKind(), getCall());
+        return String.format("%s 제조사의 %s를 사용하여 %s라고 통화한다.",
+                company, kind, call);
     }
 }

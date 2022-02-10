@@ -16,6 +16,10 @@ package com.example.demo.oop2.domain;
 public class IPhone extends CelPhone{
     private String search;
 
+    public IPhone(String company, String kind, String move){
+        super(company, kind, move);
+    }
+
     public String getSearch() {
         return search;
     }

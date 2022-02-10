@@ -16,6 +16,10 @@ package com.example.demo.oop2.domain;
 public class GalPhone extends IPhone{
     private String pay;
 
+    public GalPhone(String company, String kind){
+        super(company, kind, "이동");
+    }
+
     public String getPay() {
         return pay;
     }

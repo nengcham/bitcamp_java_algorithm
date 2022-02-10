@@ -21,12 +21,11 @@ import java.util.Scanner;
  * 2022-02-09   choigeonil    최초 생성
  */
 public class OopController {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Phone phone = new Phone();
-        CelPhone celPhone = new CelPhone();
-        IPhone iPhone = new IPhone();
-        GalPhone galPhone = new GalPhone();
+    public static void excute(Scanner scanner) {
+        Phone phone = new Phone("금성", "금성전화기");
+        CelPhone celPhone = new CelPhone("블랙베리", "핸드폰", "이동");
+        IPhone iPhone = new IPhone("애플", "아이폰", "이동");
+        GalPhone galPhone = new GalPhone("삼성", "갤럭시");
         PhoneService phoneService = new PhoneServiceImpl();
 
         while (true){
@@ -40,28 +39,18 @@ public class OopController {
                 case "0":
                     System.out.println("EXIT"); return;
                 case "1":
-                    phone.setCompany("금성");
-                    phone.setKind("금성전화");
                     phone.setCall("여보세요?");
                     phoneService.usePhone(phone);
                     break;
                 case "2":
-                    celPhone.setCompany("블랙베리");
-                    celPhone.setKind("핸드폰");
                     celPhone.setCall("안녕하세요");
-                    celPhone.setMove("이동");
                     phoneService.useCelPhone(celPhone);
                     break;
                 case "3":
-                    iPhone.setCompany("애플");
-                    iPhone.setKind("아이폰");
-                    iPhone.setMove("이동");
                     iPhone.setSearch("뉴스");
                     phoneService.useIPhone(iPhone);
                     break;
                 case "4":
-                    galPhone.setCompany("삼성");
-                    galPhone.setKind("갤럭시");
                     galPhone.setPay("삼성페이");
                     phoneService.useGalPhone(galPhone);
                     break;

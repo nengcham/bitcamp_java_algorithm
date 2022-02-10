@@ -16,14 +16,13 @@ package com.example.demo.oop2.domain;
 public class CelPhone extends Phone{
     protected String move;
 
-
+    public CelPhone(String company, String kind, String move){
+        super(company, kind);
+        this.move = move;
+    }
 
     public String getMove() {
         return move;
-    }
-
-    public void setMove(String move) {
-        this.move = move;
     }
 
     @Override
