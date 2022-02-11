@@ -116,33 +116,32 @@ public class QuizController {
                     while (true){
                         System.out.println("[소메뉴]\n" +
                                 "0. 종료\n" +
-                                "1. 랜덤문제(9가지)");
+                                "[김아름]1.bubbleSort 2.insertionSort 3.selectionSort\n" +
+                                "[강민]4.quickSort 5.mergeSort\n" +
+                                "[유재혁]6.magicSquare\n" +
+                                "[최건일]7.zigzag\n" +
+                                "[장원종]8.rectangleStarPrint 9.triangleStarPrint");
                         switch (scanner.next()){
                             case "0":
                                 System.out.println("EXIT"); return;
                             case "1":
-                                int random = (int)(Math.random()*9);
-                                switch (random){
-                                    case 0:
-                                        feb10Service.bubbleSort(); break;
-                                    case 1:
-                                        feb10Service.insertionSort(); break;
-                                    case 2:
-                                        feb10Service.selectionSort(); break;
-                                    case 3:
-                                        feb10Service.quickSort(); break;
-                                    case 4:
-                                        feb10Service.mergeSort(); break;
-                                    case 5:
-                                        feb10Service.magicSquare(); break;
-                                    case 6:
-                                        feb10Service.zigzag(); break;
-                                    case 7:
-                                        feb10Service.rectangleStarPrint(); break;
-                                    case 8:
-                                        feb10Service.triangleStarPrint(); break;
-                                }
-                                break;
+                                feb10Service.bubbleSort(); break;
+                            case "2":
+                                feb10Service.insertionSort(); break;
+                            case "3":
+                                feb10Service.selectionSort(); break;
+                            case "4":
+                                feb10Service.quickSort(); break;
+                            case "5":
+                                feb10Service.mergeSort(); break;
+                            case "6":
+                                feb10Service.magicSquare(); break;
+                            case "7":
+                                feb10Service.zigzag(); break;
+                            case "8":
+                                feb10Service.rectangleStarPrint(); break;
+                            case "9":
+                                feb10Service.triangleStarPrint(); break;
                             default:
                                 System.out.println("WRONG");
                         }
