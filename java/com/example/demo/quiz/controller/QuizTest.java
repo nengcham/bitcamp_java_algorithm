@@ -20,7 +20,7 @@ public class QuizTest {
         Scanner scanner = new Scanner(System.in);
         int rannum = (int)(Math.random()*9+1);
         System.out.println("### 지그재그 ###\n" +
-                "1 ~ 10 사이의"+ rannum +"지그재그를 출력합니다.");
+                "1 ~ 10 사이의 무작위 정수 "+ rannum +" 지그재그를 출력합니다.");
 
         int[][] arr =new int[rannum][rannum];
         int res = 1;
