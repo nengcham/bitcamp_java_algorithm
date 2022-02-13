@@ -38,11 +38,7 @@ public class DemoApplication {
 					studentController.excute(scanner);break;
 				default:
 					System.out.println("WRONG"); break;
-
 			}
 		}
-
-
 	}
-
 }

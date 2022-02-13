@@ -40,10 +40,18 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void rps(Scanner scanner) {
-        // 1. 메뉴출력
-        // 1-1. 입력값이 범위를 벗어나면 다시 입력받기
-        // 2. 사용자, 컴퓨터가 낸 가위바위보 출력
-        // 3. 결과값 출력
+        /**
+         *  1. 메뉴출력
+         *
+         *  2. 가위바위보 입력값 받기
+         *  2-1. 입력값이 범위를 벗어나면 다시 입력받기
+         *
+         *  3. 사용자, 컴퓨터가 낸 가위바위보 출력
+         *  4. 입력값이 같으면 비김
+         *  5. com == (user-1)%3+1 이면 컴퓨터의 승리
+         *  6. 결과값 출력
+         */
+
         while (true){
             System.out.println("###가위바위보 게임###\n" +
                     "0.종료 1.가위 2.바위 3.보");
