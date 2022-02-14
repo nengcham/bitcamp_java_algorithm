@@ -76,7 +76,7 @@ public class Feb10ServiceImpl implements Feb10Service {
          * 3. count%ranNum==0 줄바꿈(\n)
          */
 
-        int ranNum = (int)(Math.random()*9+1);
+        int ranNum = (int)(Math.random()*10+1);
         System.out.println("### 지그재그 ###\n" +
                 "1 ~ 10 사이의 무작위 정수 "+ "["+ranNum+"]" +" 지그재그를 출력합니다.");
 
@@ -89,6 +89,11 @@ public class Feb10ServiceImpl implements Feb10Service {
                 } else {
                     arr[i][ranNum-1-j] = count;
                 }
+                count++;
+            }
+        }
+        for(int i = 0; i < ranNum; i++){
+            for(int j = 0; j < ranNum; j++){
                 System.out.print(arr[i][j] + "\t");
                 if (count%ranNum==0){
                     System.out.println();
