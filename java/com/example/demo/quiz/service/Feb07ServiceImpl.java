@@ -41,48 +41,27 @@ public class Feb07ServiceImpl implements Feb07Service {
     @Override
     public void rps(Scanner scanner) {
         /**
-         *  1. 메뉴출력
+         *  AUTHOR : 최건일
          *
-         *  2. 가위바위보 입력값 받기
-         *  2-1. 입력값이 범위를 벗어나면 다시 입력받기
-         *
-         *  3. 사용자, 컴퓨터가 낸 가위바위보 출력
-         *  4. 입력값이 같으면 비김
-         *  5. com == (user-1)%3+1 이면 컴퓨터의 승리
-         *  6. 결과값 출력
+         *  1. 사용자, 컴퓨터가 낸 가위바위보 Math.random()으로 생성
+         *  2. 3항연산자를 사용하여 결과값을 출력 -> ()? : ;
+         *  3. 값이 같으면 Draw
+         *  4. com == (user-1)%3+1 이면 컴퓨터 Win
+         *  5. 결과값 출력
          */
 
-        while (true){
-            System.out.println("###가위바위보 게임###\n" +
-                    "0.종료 1.가위 2.바위 3.보");
-            int user = scanner.nextInt();
-            int com = (int)(Math.random() * 3);
-            String[] arr = {"가위", "바위", "보"};
-            String s = "결과: ";
-            while (user<0){
-                System.out.println("잘못 입력하셨습니다. 다시 입력해주세요\n");
-                user = scanner.nextInt();
-            }
-            while (user>3){
-                System.out.println("잘못 입력하셨습니다. 다시 입력해주세요\n");
-                user = scanner.nextInt();
-            }
-            if (user == 0){break;}
-            System.out.println("사용자: "+ arr[user-1]+"\t컴퓨터: "+arr[com]);
-            if (user-1 == com){
-                s += "무승부";
-            } else if (com == (user-1)%3+1){
-                s += "컴퓨터 승리";
-            } else {
-                s += "유저 승리";
-            }
-            System.out.println(s);
-            // (유저가 낸 가위바위보)%3+1 == 컴퓨터가 낸 가위바위보
-            // 컴퓨터 승리
-            // (유저가 낸 가위바위보)%3+1 != 컴퓨터가 낸 가위바위보
-            // 유저 승리
+        System.out.println("### 가위바위보 게임 ###");
+        int player = (int)(Math.random()*3)+1;
+        int com = (int)(Math.random()*3)+1;
+        String[] rps = {"가위", "바위", "보"};
+        System.out.println("플레이어: "+rps[player-1]+"\n"+"컴퓨터: "+rps[com-1]);
+        System.out.println((player == com) ? "Draw":(com > (player+1)%3) ? "Win" : "Lose");
+        // (유저가 낸 가위바위보)%3+1 == 컴퓨터가 낸 가위바위보
+        // 컴퓨터 승리
+        // (유저가 낸 가위바위보)%3+1 != 컴퓨터가 낸 가위바위보
+        // 유저 승리
         }
-    }
+
 
     @Override
     public void getPrime(Scanner scanner) {

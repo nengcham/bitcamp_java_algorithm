@@ -18,14 +18,16 @@ public class Feb08ServiceImpl implements Feb08Service{
     @Override
     public void lotto(Scanner scanner) {
         /**
-         * 1. 메뉴출력
+         *  AUTHOR : 최건일
          *
-         * 2. 무작위 로또번호 받기
+         * 1. 메뉴출력("0.종료 1.무작위 로또번호 받기 2.로또게임")
+         *
+         * 2. case 1. 무작위 로또번호 받기
          * 2-1. 1~45 사이의 랜덤한 숫자 6개를 int 배열 elements로 입력(int[] comNum)
          * 2-2. 중복된 숫자는 제외해야 하므로 i번째 값이 미리 입력된 값고 같으면 i번쨰 값 다시 받기
          * 2-3. int[] conNum 출력
          *
-         * 3. 로또게임 : 무작위 로또번호와 사용자가 입력한 숫자 6개의 중복갯수(당첨)를 출력하는 게임
+         * 3. case 2. 로또게임 : 무작위 로또번호와 사용자가 입력한 숫자 6개의 중복갯수(당첨)를 출력하는 게임
          * 3-1. 무작위 번호 6개(int[] comNum)를 입력하는 것은 2. 로또번호 받기와 동일
          * 3-2. scanner로 1~45 사이의 중복되지 않는 정수 입력받아 int배열 userNum으로 입력
          * 3-3. for loop를 사용하여 comNum과 userNum 0~5번 elements들을 비교

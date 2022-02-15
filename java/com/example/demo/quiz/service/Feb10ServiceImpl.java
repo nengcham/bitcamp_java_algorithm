@@ -60,6 +60,8 @@ public class Feb10ServiceImpl implements Feb10Service {
     @Override
     public void zigzag() {
         /**
+         *  AUTHOR : 최건일
+         *
          * 1. 문제 : 랜덤한 정수를(n) 생성하여 행,열 n*n의 숫자배열을 지그재그로 생성
          *  ex) 랜덤한 정수 ranNum = 5
          *      출력 :  1  2  3  4  5
