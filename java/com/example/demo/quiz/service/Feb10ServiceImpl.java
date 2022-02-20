@@ -23,19 +23,19 @@ public class Feb10ServiceImpl implements Feb10Service {
     public void bubbleSort() {
         // 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
         System.out.println("### bubbleSort ###");
-/**
- * author       : 김아름
- * desc         : 버블정렬
- * int 타입의 arr 변수 선언, arr 는 10개의 인덱스 값을 가지고 있음
- * Math 클래스로 1~100의 정수를 구하고 arr[]변수에 넣어 랜덤으로 10개의 숫자를 구함
- *                              Math 클래스는 int로 형변환 했기 때문에 1~100까지 숫자를 구하기 위해 +1
- *
- * int j 선언 -> 정렬 회전수
- * int k 선언 -> 앞의 수와 비교하기 위한 값
- *
- * 앞의 수가 뒤의 수보다 크다면 자리를 바꿔준다
- * temp -> 바꾸기 위한 변수
- * */
+        /**
+         * author       : 김아름
+         * desc         : 버블정렬
+         * int 타입의 arr 변수 선언, arr 는 10개의 인덱스 값을 가지고 있음
+         * Math 클래스로 1~100의 정수를 구하고 arr[]변수에 넣어 랜덤으로 10개의 숫자를 구함
+         *                              Math 클래스는 int로 형변환 했기 때문에 1~100까지 숫자를 구하기 위해 +1
+         *
+         * int j 선언 -> 정렬 회전수
+         * int k 선언 -> 앞의 수와 비교하기 위한 값
+         *
+         * 앞의 수가 뒤의 수보다 크다면 자리를 바꿔준다
+         * temp -> 바꾸기 위한 변수
+         * */
 
         int[] arr = new int[10];
         System.out.println("정렬전: ");
@@ -63,12 +63,12 @@ public class Feb10ServiceImpl implements Feb10Service {
     public void insertionSort() {
         // 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
         System.out.println("### insertionSort ###");
-/**
- * author       : 김아름
- * desc         : 삽입정렬
- *
- *
- * */
+        /**
+         * author       : 김아름
+         * desc         : 삽입정렬
+         *
+         *
+         * */
         int[] arr = new int[10];
 
         System.out.println("정렬전: ");
@@ -95,12 +95,13 @@ public class Feb10ServiceImpl implements Feb10Service {
     @Override
     public void selectionSort() {
         // 랜덤 정수 ( 1 ~ 100) 사이의 10 개 정수 정렬
-/**
- * author       : 김아름
- * desc         : 선택정렬
- *
- *
- * */
+        System.out.println("### selectionSort ###");
+        /**
+         * author       : 김아름
+         * desc         : 선택정렬
+         *
+         *
+         */
         int[] arr = new int[10];
 
         System.out.println("정렬전: ");
@@ -253,6 +254,7 @@ public class Feb10ServiceImpl implements Feb10Service {
 
     @Override
     public void magicSquare() {
+        System.out.println("### magicSquare ###");
         /**
          *author     : 유재혁
          *desc       : magicSquare 마방진
