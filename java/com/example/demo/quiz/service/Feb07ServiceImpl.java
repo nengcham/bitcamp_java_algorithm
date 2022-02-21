@@ -18,30 +18,21 @@ import java.util.Scanner;
 public class Feb07ServiceImpl implements Feb07Service {
     @Override
     public void dice(Scanner scanner) {
-        String res = " ";
-        int start = 0;
-        int dice1 = (int) (Math.random() * 6 + 1);
-        int dice2 = (int) (Math.random() * 6 + 1);
+        int player = (int)(Math.random()*6)+1;
+        int com = (int)(Math.random()*6)+1;
 
-        System.out.println("숫자 0을 입력하면 게임이 시작합니다.");
-        if(start == scanner.nextInt()) {
-            System.out.println("사용자가 주사위를 던집니다.");
-            System.out.println(dice1);
-            System.out.println("컴퓨터가 주사위를 던집니다.");
-            System.out.println(dice2);}
-
-        if(dice1>dice2) {
-            res = "사용자가 이겼습니다.";
-        }else if(dice1 == dice2){
-            res = "비겼습니다.";
-        } else res = "컴퓨터가 이겼습니다.";
-        System.out.println(res);
+        System.out.println("플레이어 주사위눈: "+player+"\n"
+                +"컴퓨터 주사위눈: "+ com);
+        String res = "Draw";
+        if (player != com) res = (player > com) ? "You Win!" : "You Lose!";
+        System.out.println("승부결과: "+res);
     }
 
     @Override
     public void rps(Scanner scanner) {
         /**
-         *  AUTHOR : 최건일
+         *  author     : 최건일
+         *  desc       : 가위바위보
          *
          *  1. 사용자, 컴퓨터가 낸 가위바위보 Math.random()으로 생성
          *  2. 3항연산자를 사용하여 결과값을 출력 -> ()? : ;
