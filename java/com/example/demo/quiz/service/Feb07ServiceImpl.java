@@ -18,6 +18,10 @@ import java.util.Scanner;
 public class Feb07ServiceImpl implements Feb07Service {
     @Override
     public void dice(Scanner scanner) {
+        /**
+         *  author     : 유재혁
+         *  desc       : 주사위굴리기
+         */  
         int player = (int)(Math.random()*6)+1;
         int com = (int)(Math.random()*6)+1;
 
@@ -56,6 +60,10 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void getPrime(Scanner scanner) {
+        /**
+         *  author     : 강민
+         *  desc       : 소수구하기
+         */
         int count=0;
         System.out.println("100이하의 숫자를 입력(소수 구하기) : ");
         int number = scanner.nextInt();
@@ -75,6 +83,10 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void leapYear(Scanner scanner) {
+        /**
+         *  author     : 장원종
+         *  desc       : 윤년구하기
+         */
         System.out.println("자바로 입력받은 연도가 윤년인지 평년인지 판단하기\n"+"연도를 입력하시오");
         int a = scanner.nextInt();
         if(a%4==0 && a%100!=0 || a%400==0){
@@ -106,6 +118,10 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void numberGolf(Scanner scanner) {
+        /**
+         *  author     : 김아름
+         *  desc       : 업다운게임
+         */
         System.out.println("5. 임의로 입력받은 숫자 맞추기\n"+"1~100 숫자 입력");
         int count = 0;
         int num = (int)(Math.random() * 100)+1;

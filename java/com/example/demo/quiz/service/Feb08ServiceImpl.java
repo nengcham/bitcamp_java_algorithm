@@ -18,8 +18,8 @@ public class Feb08ServiceImpl implements Feb08Service{
     @Override
     public void lotto(Scanner scanner) {
         /**
-         *  AUTHOR : 최건일
-         *
+         *  author     : 최건일
+         *  desc       : 로또
          * 1. 메뉴출력("0.종료 1.무작위 로또번호 받기 2.로또게임")
          *
          * 2. case 1. 무작위 로또번호 받기
@@ -99,18 +99,20 @@ public class Feb08ServiceImpl implements Feb08Service{
     }
 
     @Override
-    /**숫자야구의 조건
-     1 ~ 9 사이의 랜덤 숫자 3개 생성 (중복 X, 음수 X)
-     1 ~ 9 사이의 사용자 입력 숫자 3개 생성 (중복 X, 음수 X)
-     랜덤 숫자와 사용자 입력 숫자의 위치와 숫자가 모두 같은 경우 -> strike
-     랜덤 숫자와 사용자 입력 숫자의 위치는 다르고 숫자가 같은 경우 -> ball
-     하나의 랜덤 숫자당 기회 총 10번
-     기회를 모두 소진하거나 정답을 입력 시 replay 여부 체크
-     'Y' 또는 'y' 입력 시 랜덤 숫자 생성부터 다시 실행
-     'N' 또는 'n' 이나 다른 문자 입력 시 게임 종료
-     *
-     */
     public void baseball(Scanner scanner) {
+        /**숫자야구의 조건
+         author     : 장원종
+         desc       : 야구게임
+         1 ~ 9 사이의 랜덤 숫자 3개 생성 (중복 X, 음수 X)
+         1 ~ 9 사이의 사용자 입력 숫자 3개 생성 (중복 X, 음수 X)
+         랜덤 숫자와 사용자 입력 숫자의 위치와 숫자가 모두 같은 경우 -> strike
+         랜덤 숫자와 사용자 입력 숫자의 위치는 다르고 숫자가 같은 경우 -> ball
+         하나의 랜덤 숫자당 기회 총 10번
+         기회를 모두 소진하거나 정답을 입력 시 replay 여부 체크
+         'Y' 또는 'y' 입력 시 랜덤 숫자 생성부터 다시 실행
+         'N' 또는 'n' 이나 다른 문자 입력 시 게임 종료
+         *
+         */
         int com[] = new int[3]; // 컴퓨터가 제공하는 숫자
         int user[] = new int[3]; // 사용자가 입력할 숫자
         Random random = new Random();
@@ -159,6 +161,10 @@ public class Feb08ServiceImpl implements Feb08Service{
 
     @Override
     public void booking(Scanner scanner) {
+        /**
+        *  author     : 김아름
+        *  desc       : 좌석예약
+        */
         int seat[] = new int[22];
         int reserved;
         String s = "";
@@ -192,6 +198,10 @@ public class Feb08ServiceImpl implements Feb08Service{
 
     @Override
     public void bank(Scanner scanner) {
+        /**
+        *  author     : 강민
+        *  desc       : 입출금
+        */
         int jango = 0;
         int money =0;
 
@@ -223,6 +233,10 @@ public class Feb08ServiceImpl implements Feb08Service{
 
     @Override
     public void gugudan(Scanner scanner) {
+        /**
+         *  author     : 유재혁
+         *  desc       : 구구단
+         */
         System.out.println("5. 구구단");
         for (int k = 2; k < 10; k+=4) {
             for(int i =1; i<10; i++) {
